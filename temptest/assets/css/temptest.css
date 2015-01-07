@@ -1,0 +1,36 @@
+#temperatures, #selectedtemperatures { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	float: left; 
+	margin-right: 10px; 
+	background: #eee; 
+	padding: 5px; 
+	width: 143px;
+	min-height: 40px;
+}
+
+#temperatures li, #selectedtemperatures li{ 
+	margin: 5px; 
+	padding: 5px; 
+	font-size: 1.2em; 
+	width: 120px; 
+	border: 1px solid;
+}
+
+#leftstack {
+	float: left;
+	
+}
+
+#rightstack{
+	float: left;
+	margin: 0px 20px;
+}
+
+#bed{
+	clear: both;
+    float: left;
+    margin: 20px;
+}
+
