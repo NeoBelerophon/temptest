@@ -12,9 +12,9 @@ $testtemps = json_decode(stripslashes($_POST['testtemps']));
 
 $tempstring = "";
 foreach($testtemps as $d){
-	$tempstring += $d . ",";
+	$tempstring .= $d . " ";
 }
-$tempstring = rtrim($tempstring, ",");
+$tempstring = rtrim($tempstring, " ");
 
 /** CONNECT DATABASE */
 $db = new Database();
@@ -28,7 +28,7 @@ if (!$obj_id){
 	$_obj_insert['obj_description'] = "Objects created by Temptest plugin";
 	$_obj_insert['private'] = "false";
 	$_obj_insert['date_insert'] = 'now()';
-	$_obj_insert['user'] = $_SESSION['user'];
+	$_obj_insert['user'] = $_SESSION['user']['id'];
 	$obj_id = $db->insert('sys_objects', $_obj_insert);
 }
 

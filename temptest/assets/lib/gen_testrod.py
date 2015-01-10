@@ -37,6 +37,8 @@ parser.add_argument('--temp1', dest='temp1', help='nozzle temperature while firs
 parser.add_argument('--file', dest='file', help='output file')
 args = parser.parse_args()
 
+tstarg = ["160","165"] 
+
 
 f = open(args.file, 'w')
 f.write('G21 ; set units to millimeters\n')
@@ -55,5 +57,4 @@ for temp in args.temps:
 f.write('M107')
 
 f.close()  # you can omit in most cases as the destructor will call if
-
 
