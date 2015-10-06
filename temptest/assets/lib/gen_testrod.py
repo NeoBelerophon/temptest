@@ -14,6 +14,7 @@ def append(file_read, handle_append):
     for line in r:
         handle_append.write(line)
     r.close()
+    handle_append.write('\n')
 
 
 def append_relative_height(file_read, handle_append):
@@ -27,6 +28,7 @@ def append_relative_height(file_read, handle_append):
 
         handle_append.write(line)
     r.close()
+    handle_append.write('\n')
 
 
 parser = argparse.ArgumentParser(description='Generate test_rod.gcode.')
