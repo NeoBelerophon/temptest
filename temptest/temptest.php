@@ -13,8 +13,8 @@ class Temptest extends Plugin {
 
 	public function __construct() {
 		parent::__construct();
-		$this->layout->add_css_file(array('src'=>'application/plugins/temptest/assets/css/temptest.css', 'comment' => 'stylesheet for temptest'));
-		$this->layout->add_js_file(array('src'=>'application/plugins/temptest/assets/js/temptest.js', 'comment' => 'stylesheet for temptest'));
+		$this->layout->add_css_file(array('src'=>site_url().'application/plugins/temptest/assets/css/temptest.css', 'comment' => 'stylesheet for temptest'));
+		$this->layout->add_js_file(array('src'=>site_url().'application/plugins/temptest/assets/js/temptest.js', 'comment' => 'stylesheet for temptest'));
 	}
 
 	public function index() {
